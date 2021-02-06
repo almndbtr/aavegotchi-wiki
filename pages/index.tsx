@@ -4,6 +4,7 @@ import React from 'react'
 import Layout from "../components/Layout";
 import NextReusableHead from '../components/NextComponents/NextReusableHead';
 import { Col, Row } from 'react-bootstrap';
+import EditThisPageLink from '../components/EditThisPageLink';
 import Sidebar from '../components/Sidebar';
 import ReactMarkdownWithHtml from 'react-markdown/with-html'
 import htmlParser from 'react-markdown/plugins/html-parser'
@@ -106,6 +107,10 @@ const Index = (props) => {
               Last updated on {latestCommit && latestCommit.date} by {latestCommit && latestCommit.name}
             </div>
 
+            <EditThisPageLink
+              lang="en"
+              pageID="index"
+            />
 
             <hr />
 

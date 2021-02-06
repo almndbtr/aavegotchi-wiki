@@ -3,6 +3,7 @@ import React from 'react'
 import matter from 'gray-matter'
 import { Row, Col, Container } from "react-bootstrap";
 import ReactMarkdown from "react-markdown"
+import EditThisPageLink from '../../components/EditThisPageLink';
 import Layout from "../../components/Layout";
 import NextReusableHead from "../../components/NextComponents/NextReusableHead";
 import Sidebar from "../../components/Sidebar";
@@ -142,11 +143,10 @@ const Page = (props) => {
                         }
 
                         { router.query.lang === 'en' &&
-                            <div style={{marginTop: '1rem'}}>
-                                <a href={`https://github.com/aavegotchi/aavegotchi-wiki/edit/main/posts/${router.query.lang}/${router.query.pageID}.md`}>
-                                    ✏️ Edit this page
-                                </a>
-                            </div>
+                            <EditThisPageLink
+                              lang={router.query.lang}
+                              pageID={router.query.pageID}
+                            />
                         }
 
                         <hr />
